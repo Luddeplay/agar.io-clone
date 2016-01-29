@@ -193,12 +193,13 @@ function balanceMass() {
         users
             .map(function(u) {return u.massTotal; })
             .reduce(function(pu,cu) { return pu+cu;}, 0);
+        
 
     var massDiff = c.gameMass - totalMass;
     var maxFoodDiff = c.maxFood - food.length;
     var foodDiff = parseInt(massDiff / c.foodMass) - maxFoodDiff;
-    var foodToAdd = Math.min(foodDiff, maxFoodDiff);
-    var foodToRemove = -Math.max(foodDiff, maxFoodDiff);
+    var foodToAdd = Math.min(foodDiff, maxFoodDiff);15
+    var foodToRemove = -Math.max(foodDiff, maxFoodDiff);10
 
     if (foodToAdd > 0) {
         //console.log('[DEBUG] Adding ' + foodToAdd + ' food to level!');
