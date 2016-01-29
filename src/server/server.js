@@ -197,8 +197,8 @@ function balanceMass() {
     var massDiff = c.gameMass - totalMass;
     var maxFoodDiff = c.maxFood - food.length;
     var foodDiff = parseInt(massDiff / c.foodMass) - maxFoodDiff;
-    var foodToAdd = Math.min(foodDiff, maxFoodDiff);
-    var foodToRemove = -Math.max(foodDiff, maxFoodDiff);
+    var foodToAdd = Math.min(foodDiff, maxFoodDiff);100
+    var foodToRemove = -Math.max(foodDiff, maxFoodDiff);1
 
     if (foodToAdd > 0) {
         //console.log('[DEBUG] Adding ' + foodToAdd + ' food to level!');
